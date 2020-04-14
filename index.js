@@ -18,7 +18,7 @@ function reverseString(str) {
 
 reverseString('hello');
 
-// Solution for the third question Factorialize a Number.
+// Solution for the THIRD question Factorialize a Number.
 function factorialize(num) {
 	//we have num and a p
 	let result = 1;
@@ -31,7 +31,7 @@ function factorialize(num) {
 
 factorialize(5);
 
-// Soloution for the third problem Find the Longest Word in a String
+// Soloution for the FOURTH problem Find the Longest Word in a String
 
 function findLongestWordLength(str) {
 	var words = str.split(' ');
@@ -46,7 +46,7 @@ function findLongestWordLength(str) {
 	return maxLength;
 }
 
-//solution for question four Return Largest Numbers in Arrays
+//solution for question FIVE Return Largest Numbers in Arrays
 function largestOfFour(arr) {
 	var results = [];
 	for (var n = 0; n < arr.length; n++) {
@@ -63,7 +63,7 @@ function largestOfFour(arr) {
 	return results;
 }
 
-//SOLUTION question five Confirm the Ending
+//SOLUTION question SIXTH Confirm the Ending
 
 function confirmEnding(str, target) {
 	return str.slice(str.length - target.length) === target;
@@ -71,7 +71,7 @@ function confirmEnding(str, target) {
 
 confirmEnding('Bastian', 'n');
 
-//QUESTION 6  Repeat a String Repeat a String
+//Solution for question SEVEN  Repeat a String Repeat a String
 function repeatStringNumTimes(str, num) {
 	if (num <= 0) {
 		return '';
@@ -83,7 +83,7 @@ function repeatStringNumTimes(str, num) {
 }
 repeatStringNumTimes('abc', 3);
 
-// 7th question Basic Algorithm Scripting: Truncate a String
+// 8TH question Basic Algorithm Scripting: Truncate a String
 
 function truncateString(str, num) {
 	if (str.length > num) {
@@ -93,10 +93,27 @@ function truncateString(str, num) {
 	}
 }
 
-// 8th Question Finders keepers
+// 9TH Question Finders keepers
 
 function findElement(arr, func) {
 	return arr.find(func);
 }
 
-//
+//10TH th question Boo Who
+
+function booWho(bool) {
+	return typeof bool === 'boolean';
+}
+
+booWho(null);
+
+// 11th question Title Case a SentencePassed
+
+function titleCase(str) {
+	return str.toLowerCase().replace(/(^|\s)\S/g, function(a) {
+		return a.toUpperCase();
+	});
+	return string;
+}
+
+titleCase("I'm a little tea pot");
