@@ -117,3 +117,86 @@ function titleCase(str) {
 }
 
 titleCase("I'm a little tea pot");
+
+//Jays solution to "truncate"
+function truncateString(str, num) {
+	let arraySplit = str.split('');
+
+	// let remaining = str.length - num;
+	// let afterRemaining = str.length - remaining;
+	// console.log(([ a, b,  ...str ] = split));
+	for (let i = 0; i < arraySplit.length; i++) {
+		if (num < arraySplit.length) {
+			return str.slice([ 0 ], num) + '...';
+		} else {
+			return str.slice([ 0 ], str.length);
+		}
+	}
+}
+truncateString('A-tisket a-tasket A green and yellow basket', 48);
+
+//jason's answer to  finders Keeper
+function findElement(arr, func) {
+	let number = 0;
+	//console.log((num.length = 5)); // will print 5
+	//console.log(num.length) //will print 4
+	for (let i = 0; i < arr.length; i++) {
+		// 	if (num[i].length % 2) {
+		// 		console.log(array.length);
+		// 	}
+		// }
+		let number = arr[i];
+		//console.log(num.filter(func));
+		if (func(number)) {
+			return number;
+		}
+	}
+}
+
+findElement([ 1, 2, 3, 4 ], (num) => num % 2 === 0);
+
+//Jason answer for Boo Who question
+function booWho(bool) {
+	if (typeof bool === 'boolean') {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+booWho(null);
+
+//Jason's answer slice and splice
+function frankenSplice(arr1, arr2, n) {
+	let arr = arr2.slice();
+
+	//console.log(arr2.splice(n, 0, arr1));
+
+	arr.splice(n, 0, ...arr1);
+
+	console.log(arr);
+	return arr;
+}
+
+frankenSplice([ 'claw', 'tentacle' ], [ 'head', 'shoulders', 'knees', 'toes' ], 2);
+
+// Jason's answer to Boolean question
+function bouncer(arr) {
+	//console.log(arr);
+
+	arr.filter(Boolean);
+}
+bouncer([ 7, 'ate', '', false, 9 ]);
+
+//Jason's algorithm scripting mutation answer;
+
+function mutation(arr) {
+	let firstWord = arr[0].toLowerCase();
+	let secondWord = arr[1].toLowerCase();
+
+	for (let i = 0; i < secondWord.length; i++) {
+		if (firstWord.indexOf(secondWord[i]) === -1) return false;
+	}
+	return true;
+}
+mutation([ 'hello', 'hey' ]);
